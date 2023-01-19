@@ -49,9 +49,10 @@ let para = document.createElement('p')
 para.innerText = 'querySelector returns an element you can maupulate but querySelectorAll returns the collection of elements in array kind of structure.'
 console.log(para);
 // Remove all the elements from box 1
-
+ let boxOne =document.querySelector('.one')
+ boxOne.innerHTML = ""
 // Replace all the elements inside box 1 with the para (you created above)
-
+boxOne.append(para)
 /* Walking the DOM
 Do the following after selecting box 16 and storing in variable named box16
 
@@ -69,11 +70,32 @@ Do the following after selecting box 16 and storing in variable named box16
 
   - Focus on the difference between element and node
 */
+let box16 = document.querySelector('.sixteen')
+console.log(box16.parentElement);
+console.log(box16.childNodes);
+console.log(box16.previousSibling);
+console.log(box16.nextSibling);
+console.log(box16.firstChild);
+console.log(box16.lastChild);
+
+console.log(box16.parentElement);
+console.log(box16.previousElementSibling);
+console.log(box16.nextElementSibling);
+console.log(box16.firstElementChild);
+console.log(box16.lastElementChild);
 
 // Select box 2 and append a new paragraph element with content "Append inserts as last child" just after hr element.
+ let boxTwo = document.querySelector('.two')
+ let newPara = document.createElement('p')
+ newPara.innerText = "Append inserts as last child"
 
+ boxTwo.append(newPara)
 // Select box 3 and prepend a new paragraph element with content "Prepend inserts as first child" just before hr element.
+let boxThree = document.querySelector('.two')
+let newParaBox3 = document.createElement('p')
+newParaBox3.innerText = "Append inserts as last child"
 
+boxThree.append(newParaBox3)
 // Change the border of box 4 to '1px solid black'
 
 // Change the border radius of box 5 to 10px.
