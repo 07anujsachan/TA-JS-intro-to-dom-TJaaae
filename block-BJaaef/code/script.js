@@ -8,15 +8,16 @@ function createUi(arr) {
       let div = document.createElement("div");
       div.className = "div flex ";
       let img = document.createElement("img");
-      img.src = people.image;
       img.className = "image";
-      let h2 = document.createElement("h2");
+      img.src = people.image;
+     let h2 = document.createElement("h2");
       h2.className = " h2";
       h2.innerText = people.name;
       let para = document.createElement("p");
+      para.className = "para";
       para.innerText = people.description;
       let btn = document.createElement("button");
-      btn.className='button'
+      btn.className = "button";
       btn.innerText = "Learn More!";
       div.append(img, h2);
       li.append(div, para, btn);
